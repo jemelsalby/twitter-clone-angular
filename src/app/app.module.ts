@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SigninComponent } from './signin/signin.component';
+import { FormsModule } from '@angular/forms';
 
 const routes:Routes=[
   {
@@ -13,13 +15,15 @@ const routes:Routes=[
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-RouterModule.forRoot(routes)
+RouterModule.forRoot(routes),
+FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
